@@ -4,14 +4,15 @@ Assuming you have `python3-virtualenv` or equivelnt installed on your system, ru
 
 ```shell
 virtualenv ./.venv/
-pip install -r requirements.txt
 ```
-then activate the environment
+then activate the environment and install packages
 
 ```shell
 # in bash
 source ./.venv/bin/activate
 
-# in fish
+# or, in fish
 source ./.venv/bin/activate.fish
+
+pip install -r requirements.txt
 ```
