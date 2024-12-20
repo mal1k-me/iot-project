@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Moisture Monitor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="material-icons">opacity</i> Soil Moisture Monitor</h1>
+      </header>
+
+      <div class="card details-card">
+        <div class="card-content">
+          <h2>Sensor Details</h2>
+          <p>Raw Value: <span id="raw-value">--</span></p>
+          <p>Voltage: <span id="voltage-value">--.--</span>V</p>
+          <p>Last Update: <span id="timestamp">--:--:--</span></p>
+        </div>
+      </div>
+
+      <div class="card history-card">
+        <div class="card-content">
+          <h2>Historical Data</h2>
+          <div class="date-controls">
+            <div class="input-group">
+              <label for="start-date">Start Date</label>
+              <input type="datetime-local" id="start-date" />
+            </div>
+            <div class="input-group">
+              <label for="end-date">End Date</label>
+              <input type="datetime-local" id="end-date" />
+            </div>
+            <button onclick="window.moistureMonitor.downloadHistoricalPlot()">
+              Download Plot
+            </button>
+            <button onclick="window.moistureMonitor.downloadData()">
+              Download Data
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card graph-card">
+        <div class="card-content">
+          <h2>Live Data</h2>
+          <img id="plot" src="" alt="Sensor Data Plot" style="width: 100%" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/monitor.js') }}"></script>
+  </body>
+</html>

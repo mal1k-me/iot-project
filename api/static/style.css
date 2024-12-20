@@ -1,0 +1,123 @@
+:root {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --primary: #bb86fc;
+  --text: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.moisture-card {
+  text-align: center;
+}
+
+.status-indicator {
+  font-size: 24px;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.status-indicator.wet {
+  background-color: #2196f3;
+}
+
+.status-indicator.dry {
+  background-color: #f44336;
+}
+
+.moisture-value {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--primary);
+}
+
+.details-card p {
+  color: var(--text-secondary);
+  margin: 10px 0;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.graph-card {
+  padding: 10px;
+}
+
+.graph-card img {
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.date-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+input[type="datetime-local"] {
+  background: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  padding: 8px;
+  color: var(--text);
+}
+
+button {
+  background: var(--primary);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: var(--background);
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}

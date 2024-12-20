@@ -1,10 +1,12 @@
 # IOT Project
 
-Assuming you have `python3-virtualenv` or equivelnt installed on your system, run the following commands while inside the local repository to create the virtual Python environment
+Assuming you have `python3-virtualenv` or equivelnt installed on your system, run the following commands while inside
+the local repository to create the virtual Python environment
 
 ```shell
 virtualenv ./.venv/
 ```
+
 then activate the environment and install packages
 
 ```shell

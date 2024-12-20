@@ -1,6 +1,7 @@
-flask
 RPi.GPIO
-adafruit-circuitpython-ads1x15
-adafruit-circuitpython-busdevice
 Adafruit_ADS1x15
+flask
+flask_socketio
+requests
 matplotlib
+seaborn
