@@ -17,16 +17,12 @@ def send_data_to_api(data: dict) -> None:
 
 def main():
     sensor = MoistureSensor(channel=3)
-    last_moisture = None
     print("Starting moisture monitoring system...")
 
     try:
         while True:
             raw, voltage = sensor.read_values()
             moisture, status = sensor.get_moisture_status()
-
-            # Update LED status
-            last_moisture = moisture
 
             data = {
                 'timestamp': time.time(),
