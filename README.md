@@ -1,5 +1,8 @@
 # IOT Project
 
+
+## Setting up the environment
+
 Assuming you have `python3-virtualenv` or equivelnt installed on your system, run the following commands while inside
 the local repository to create the virtual Python environment
 
@@ -18,7 +21,12 @@ source ./.venv/bin/activate.fish
 
 pip install -r requirements.txt
 ```
-## Running
+
+## Components and wiring
+
+![Wiring](https://newbiely.com/images/tutorial/raspberry-pi-soil-moisture-sensor-wiring-diagram.jpg)
+
+## Running the demo
 
 In the Python virtual envirnoment
 
